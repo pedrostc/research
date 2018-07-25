@@ -7,3 +7,5 @@
 - [ISTIO Docs - Overview](https://istio.io/docs/concepts/what-is-istio/overview/)
 - [API Gateway to Service Mesh: Navigating a Changing Landscape - Zhamak Dehghani](https://www.youtube.com/watch?v=QYdOJ0QJptE)
 - [InfoQ - Virtual Panel: Microservices Communication and Governance Using Service Mesh](https://www.infoq.com/articles/vp-microservices-communication-governance-using-service-mesh#mainLogin)
+- [Service mesh data plane vs. control plane](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc)
+- [A sidecar for your service mesh](https://abhishek-tiwari.com/a-sidecar-for-your-service-mesh/)
