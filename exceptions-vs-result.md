@@ -4,14 +4,21 @@
 
 - [01 - Error Handling — Returning Results](https://medium.com/@michael_altmann/error-handling-returning-results-2b88b5ea11e9)
 - [02 - Fowler - Notifications](https://martinfowler.com/eaaDev/Notification.html)
-- *[03 - Fowler - Replacing Throwing Exceptions with Notification in Validations](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+- :star2: [03 - Fowler - Replacing Throwing Exceptions with Notification in Validations](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 > - Exceptions signal something outside the expected bounds of behavior of the code in question. But if you're running some checks on outside input, this is because you expect some messages to fail - and if a failure is expected behavior, then you shouldn't be using exceptions.
 > - We believe that exceptions should rarely be used as part of a program's normal flow: exceptions should be reserved for unexpected events. Assume that an uncaught exception will terminate your program and ask yourself, "Will this code still run if I remove all the exception handlers?" If the answer is "no", then maybe exceptions are being used in nonexceptional circumstances. -- Dave Thomas and Andy Hunt
-- [04 - Khorikov - Error handling: Exception or Result?](https://enterprisecraftsmanship.com/2017/03/13/error-handling-exception-or-result/)
+- :star2: [04 - Khorikov - Error handling: Exception or Result?](https://enterprisecraftsmanship.com/2017/03/13/error-handling-exception-or-result/)
 > - [Comments] In other words, if you as a library author don't know what to do with some failure, wrap it with your own exception and let it propagate further. For the client, the same failure might be an expected one so they can decide to convert it into a Result instance on their end.
 > - Failures You don't know how to deal with - Also apply to failures that don't allow you go any further with you process, you can't do anything else if it happens, just fail.
 > - [Summary] It’s pretty easy to differentiate use cases for Result and exceptions. Whenever the failure is something you expect and know how to deal with – catch it at the lowest level possible and convert into a Result instance. If you don’t know how to deal with it – let it propagate and interrupt the current business operation. Don’t catch exceptions you don’t know what to do about.
 - [05 - Khorikov - Exceptions for flow control in C#](https://enterprisecraftsmanship.com/2015/02/26/exceptions-for-flow-control-in-c/)
+> - Generally, code is read more often than written. Most of the best practices aimed to simplify understanding and reasoning about the code: the simpler code, the fewer bugs it contains, and the easier it becomes to maintain the software.
+> - Examples of exceptional situations may include database connectivity problems, lack of required configuration files and so on. Validation is no such a situation because validation logic, by its definition, expects incoming data to be incorrect
+> - Another valid use case for exceptions is code contract violation.
+> - On the other hand, the developer who uses the library might expect that the database goes off-line from time to time and design their application for database failure.
+> -  you shouldn’t wrap such code with a generic exception handler. Generic exception handler basically states that you expect any exceptions that could possibly be thrown.
+> - You can put one at the topmost level to catch all exceptions that were not handled by your code in order to log them.
+> - The best way to deal with unexpected exceptions is to discard the current operation completely.
 - [06 - Khorikov - What is an exceptional situation in code?](https://enterprisecraftsmanship.com/2017/03/30/what-is-an-exceptional-situation-in-code/)
 - [07 - Java - How to represent the result of an operation](https://codereview.stackexchange.com/questions/20285/java-how-to-represent-the-result-of-an-operation)
 - [08 - Why catch(Exception)/empty catch is bad](https://devblogs.microsoft.com/dotnet/why-catchexceptionempty-catch-is-bad/)
